@@ -1,0 +1,51 @@
+body {
+    margin 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2b2433;
+    font-family: 'Caveat', cursive;
+}
+
+.bilhete {
+    position: relative;
+    width: 320px;
+    padding: 32px 30px;
+    background-color: #f8f0dc;
+    color: #3b2f2a;
+    transform: rotate(-1deg);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+.fita {
+    position: absolute;
+    top: -14px;
+    left: 55%;
+    margin-left: -55px;
+    width: 90px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.45);
+    transform: rotate(3deg);
+}
+
+.para {
+    text-align: center;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+}
+
+.texto {
+    margin: 0;
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.assinatura {
+    margin: 32px 0 0 0;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: right;
+}
