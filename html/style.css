@@ -4,11 +4,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #2b2433;
+    background-color: transparent;
     font-family: 'Caveat', cursive;
 }
 
 .bilhete {
+    display: none;
     position: relative;
     width: 320px;
     padding: 32px 30px;
@@ -48,4 +49,8 @@ body {
     font-size: 24px;
     line-height: 32px;
     text-align: right;
+}
+
+.bilhete.aberto {
+    display: block;
 }

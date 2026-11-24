@@ -6,12 +6,17 @@ local function notificar(texto)
         EndTextCommandThefeedPostTicker(false, true)
 end
 
+-- Guarda se o bilhete ta na tela
+local aberto = false
+
 RegisterCommand('bilhete', function()
-    local ped = PlayerPedId()
-    local posicao = GetEntityCoords(ped)
+    aberto = not aberto
 
-    local x = math.floor(posicao.x)
-    local y = math.floor(posicao.y)
-
-    notificar('Papel e caneta na mão. Você está em X ' .. x .. ', Y ' .. y)
+    if aberto then
+        SendNUIMessage({ acao = 'abrir' })
+        notificar('Você pegou o bilhete.')
+    else
+        SendNUIMessage({ acao = 'fechar' })
+        notificar('Você guardou o bilhete.')
+    end
 end, false)
